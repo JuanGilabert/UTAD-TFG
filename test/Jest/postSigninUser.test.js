@@ -29,24 +29,3 @@ describe("Test unitario para comprobar la funcion que loguea a un usuario.", fun
         expect(signinResponse).toEqual({ message: "Login error." });
     });
 });
-/** Test de integracion para comprobar la funcion que loguea a un usuario.
- *
- */
-const signinTokenPlayload = {
-    userEmail: "juangilabert2002@gmail.com",
-    userRole: "user"
-}
-describe("Test de integracion para comprobar la funcion que loguea a un usuario.", function() {
-    // Caso Correcto.
-    it('esta funcion debe realizar signin correctamente y devolver un token con un plyload correcto.', async () => {
-        // Obtenemos el resultadode la operacion de signin. En este caso sera el token de acceso del usuario logueado.
-        const signinResponse = await postSignInUser(signinUserData);
-        // Verificamos que el token obtenido tiene el playload correcto.
-    });
-    // Caso Incorrecto.
-    it('esta funcion debe realizar signin incorrectamente, devolviendo un error en el token o en el playload.', async () => {
-        // Creamos el objeto que recibira el mensaje de error devuelto por la API.
-        // Esto sera probado mediante un usuario que no existe en la base de datos.
-        expect(postSignInUser(), loginApiResponse)
-    });
-});
