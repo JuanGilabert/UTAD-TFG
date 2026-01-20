@@ -2,7 +2,7 @@
 import {
     OKEY_200_MESSAGE, CREATED_201_MESSAGE,
     UNAUTHORIZED_401_MESSAGE, INTERNAL_SERVER_ERROR_500_MESSAGE
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 //// Exportamos la clase AdminController.
 export class AdminController {
     constructor({ model }) {
@@ -10,7 +10,7 @@ export class AdminController {
         this.postSignInUser = this.postSignInUser.bind(this);
         this.postSignOutUser = this.postSignOutUser.bind(this);
     }
-    // Funcion asincrona para loguear un usuario.
+    // Funcion para loguear un usuario.
     postSignInUser = async (req, res) => {
         console.log(req.body);
         // Obtenemos del modelo los datos requeridos.
@@ -29,7 +29,7 @@ export class AdminController {
         solo funciona con https y solo es accesible en el mismo dominio. */
         return res.status(200).json({ token: signinModelResponse });
     }
-    // Funcion asincrona para desloguear un usuario
+    // Funcion para desloguear un usuario
     postSignOutUser = async (req, res) => {
         // Obtenemos del modelo los datos recibidos.
         const signoutModelResponse = await this.model.postSignOutUser(req.body);
@@ -38,7 +38,7 @@ export class AdminController {
         // Enviamos la respuesta obtenida.
         return res.status(200).json({ message: "La sesion se ha cerrado correctamente." });
     }
-    // Funcion asincrona para realizar web scraping de una url.
+    // Funcion para realizar web scraping de una url.
     getScrapedDataByUrl = async (req, res) => {
         // Obtenemos de la peticion los valores necesarios.
         const { url } = req.params;

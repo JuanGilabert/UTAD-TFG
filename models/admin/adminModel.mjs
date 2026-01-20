@@ -2,10 +2,10 @@
 import { chromium } from 'playwright';
 import { hash, genSalt, compare } from 'bcrypt';
 // Modulos locales.
-import { jwtGenerator } from '../../services/jwt/generator/jwtGenerator.mjs';
+import { jwtGenerator } from '../../services/jwt/jwtGeneratorFunction.mjs';
 import { connectDB, closeDbConnection } from '../../services/database/connection/mongoDbConnection.mjs';
 import { checkIfUserExistsFunction } from '../../services/database/functions/mongoDbFunctions.mjs';
-import { USER_COLLECTION_NAME, HASH_SALT_ROUNDS, RETURN_DOCUMENT_VALUE } from '../../config/GenericEnvConfig.mjs';
+import { USER_COLLECTION_NAME, HASH_SALT_ROUNDS, RETURN_DOCUMENT_VALUE } from '../../config/EnvConfig.mjs';
 //// Exportamos la clase.
 export class AdminModel {
     // Funcion asincrona para loguear a un usuario
@@ -51,15 +51,13 @@ export class AdminModel {
         return value;
     }
     // Endpoint de web scraping que recibe la url a scrapear.
-    static async getScrapedDataByUrl(urlToScarpe) {
+    static async getScrapedDataByUrl(urlToScrape) {
         // Abrimos navegador pero con la configuracion de que no lo haga con la ventana.
-        const browser = await chromium.launch(
-            { headless: true }
-        );
+        const browser = await chromium.launch({ headless: true });
         // Creamos una nueva pagina en el navegador .
         const page = await browser.newPage();
         // Vamos a la pagina que queremos extraer.
-        await page.goto(urlToScarpe);
+        await page.goto(urlToScrape);
         // Usar herramientas de desarrollo para saber fijarnos que elementos tienen la informacion que queremos useSyncExternalStore.
         const data = await page.evaluate(
             '.s-card-container', (results) => (

@@ -2,7 +2,7 @@
 import { randomUUID } from 'node:crypto';
 // Modulos locales.
 import { connectDB } from '../../../services/database/connection/mongoDbConnection.mjs';
-import { MEDICAMENT_COLLECTION_NAME, RETURN_DOCUMENT_AFTER_VALUE } from '../../../config/GenericEnvConfig.mjs';
+import { MEDICAMENT_COLLECTION_NAME, RETURN_DOCUMENT_AFTER_VALUE } from '../../../config/EnvConfig.mjs';
 //// Exportamos la clase.
 /* Esquema para el modelo de datos de medicamentos en el sistema de salud.
 Define la estructura de los datos de un medicamento almacenado en la base de datos. */

@@ -25,7 +25,7 @@ export async function headerAuthMiddleware(req, res, next) {
     // Si el token no es correcto indicamos que no tienes autorizacion.
     const [scheme, token] = authorizationHeader.split(' ');
     if (scheme !== 'Bearer' || !token || !TOKEN_REGEX.test(token))
-        return res.status(401).json({ message: "No hay token o tiene un formato incorrecto o el formato de la cabecera es incorrecto(Bearer token)." });  
+        return res.status(401).json({ message: "No hay token, tiene un formato incorrecto o el formato de la cabecera es incorrecto(Bearer token)." });  
     // Nos conectamos a la base de datos para comprobar que el token recibido en la request se encuentra en la base de datos.
     const db = await connectDB();
     // Obtenemos del modelo el documento(el usuario completo) del token recibido en la request.

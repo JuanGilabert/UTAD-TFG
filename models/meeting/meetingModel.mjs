@@ -2,7 +2,7 @@
 import { randomUUID } from 'node:crypto';
 // Modulos locales
 import { connectDB } from '../../services/database/connection/mongoDbConnection.mjs';
-import { MEETING_COLLECTION_NAME, RETURN_DOCUMENT_AFTER_VALUE } from '../../config/GenericEnvConfig.mjs';
+import { MEETING_COLLECTION_NAME, RETURN_DOCUMENT_AFTER_VALUE } from '../../config/EnvConfig.mjs';
 //// Exportamos la clase.
 export class MeetingModel {
     static async getAllMeetings(userId, fechaInicioReunion, fechaFinReunion) {

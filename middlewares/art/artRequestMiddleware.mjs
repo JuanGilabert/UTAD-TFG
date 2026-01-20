@@ -5,7 +5,7 @@ import { validatePainting, validatePartialPainting } from '../../models/art/pain
 // Importamos los valores de las rutas/endpoints.
 import { ART_CINEMA_ROUTE_PATH, ART_MUSIC_ROUTE_PATH, ART_PAINTING_ROUTE_PATH,
     PAINTING_EXPOSURE_ROUTE_PATH, EVENT_ROUTE_PATH, IDENTIFIER_ROUTE_PATH, MUSIC_VIDEO_DOWNLOADER_ROUTE_PATH
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 //// Exportamos el middleware.
 export async function artRequestMiddleware(req, res, next) {
     // Validamos las queries de la peticion.

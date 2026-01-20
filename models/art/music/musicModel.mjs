@@ -6,7 +6,7 @@ import { execFile } from 'node:child_process';
 import { fileURLToPath } from 'url';
 // Modulos locales.
 import { connectDB } from '../../../services/database/connection/mongoDbConnection.mjs';
-import { MUSIC_COLLECTION_NAME, RETURN_DOCUMENT_AFTER_VALUE } from '../../../config/GenericEnvConfig.mjs';
+import { MUSIC_COLLECTION_NAME, RETURN_DOCUMENT_AFTER_VALUE } from '../../../config/EnvConfig.mjs';
 // Constantes locales
 const execFileAsync = promisify(execFile);
 const __filename = fileURLToPath(import.meta.url);

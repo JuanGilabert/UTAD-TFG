@@ -11,7 +11,7 @@ import { afterUserRegisterHook } from '../../hooks/afterUserRegisterHook.mjs';
 import {
     USER_COLLECTION_NAME, HASH_SALT_ROUNDS, ADMIN_ROLE_PASSWORD,
     ADMIN_ROLE_VALUE, USER_ROLE_VALUE, RETURN_DOCUMENT_AFTER_VALUE
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 //// Exportamos la clase UserModel
 export class UserModel {
     // Funcion asincrona para obtener todos los usuarios.

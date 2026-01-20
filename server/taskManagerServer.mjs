@@ -7,7 +7,7 @@ import { helmet } from "helmet";
 import {
     API_SERVER_PROCESS_NAME, ADMIN_ROUTE_PATH, USER_ROUTE_PATH, ART_ROUTE_PATH, FOOD_ROUTE_PATH,
     HEALTH_ROUTE_PATH, MEETING_ROUTE_PATH, SPORT_ROUTE_PATH, TRAVEL_ROUTE_PATH, WORK_ROUTE_PATH
-} from '../config/GenericEnvConfig.mjs';
+} from '../config/EnvConfig.mjs';
 // Importamos los middlewares necesarios.
 import { corsMiddleware } from "../middlewares/corsMiddleware.mjs";
 import { authMiddleware } from "../middlewares/headerAuthMiddleware.mjs";
