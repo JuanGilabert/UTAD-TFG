@@ -22,7 +22,7 @@ pipeline {
             steps {
                 // Copiamos el .env secreto al workspace
                 withCredentials([file(credentialsId: 'TaskManagerEnviromentCredentials', variable: 'DOTENV')]) {
-                    sh 'cp $DOTENV .env'
+                    sh 'cp "$DOTENV" .env'
                 }
             }
         }
