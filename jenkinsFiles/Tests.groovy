@@ -1,18 +1,10 @@
 properties([
     parameters([
-        [$class: 'ChoiceParameter',
-            choiceType: 'PT_CHECKBOX', description: 'Seleccion Test List',
-            name: 'TestScope', script: [$class: 'GroovyScript',
-                fallbackScript: [classpath: [], sandbox: false, script: 'return ["all"]' ],
-                script: [classpath: [], sandbox: false,
-                    script: '''
-                        return [
-                            "all", "unit", "integration", "e2e"
-                        ]
-                    '''
-                ]
-            ]
-        ],
+        choice(
+            name: 'TestScope',
+            choices: ['all', 'unit', 'integration', 'e2e'],
+            description: 'Seleccion Test List'
+        ),
         // Boleano para elegir si se quiere subir a Kibana.
         booleanParam(name: 'Kibana', defaultValue: false, description: '¿Quieres subir los resultados a Kibana?'),
     ])
