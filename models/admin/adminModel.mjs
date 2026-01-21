@@ -1,5 +1,5 @@
 // Modulos de node.
-import { chromium } from 'playwright';
+//import { chromium } from 'playwright';
 import { hash, genSalt, compare } from 'bcrypt';
 // Modulos locales.
 import { jwtGenerator } from '../../services/jwt/jwtGeneratorFunction.mjs';

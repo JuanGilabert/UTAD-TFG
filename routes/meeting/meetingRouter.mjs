@@ -3,7 +3,7 @@ import { expressRouterGenerator } from '../../utils/functions/expressRouterGener
 // Importamos los controladores
 import { MeetingController } from '../../controllers/meeting/meetingController.mjs';
 // Importamos los valores de las rutas/endpoints necesarios.
-import { EVENT_ROUTE_PATH, IDENTIFIER_ROUTE_PATH, UNAVAILABLE_DATES_ROUTE_PATH } from '../../config/GenericEnvConfig.mjs';
+import { EVENT_ROUTE_PATH, IDENTIFIER_ROUTE_PATH, UNAVAILABLE_DATES_ROUTE_PATH } from '../../config/EnvConfig.mjs';
 /** meetingRouter.
  * 
  * @param {Object} { MeetingModel } - Objeto que contiene el modelo MeetingModel.

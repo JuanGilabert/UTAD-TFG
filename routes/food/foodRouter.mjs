@@ -5,7 +5,7 @@ import { FoodController } from '../../controllers/food/foodController.mjs';
 // Importamos los valores de las rutas/endpoints.
 import { FOOD_RESTAURANT_ROUTE_PATH, FOOD_SHOPPING_LIST_ROUTE_PATH, EVENT_ROUTE_PATH,
     IDENTIFIER_ROUTE_PATH, UNAVAILABLE_DATES_ROUTE_PATH
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 /** configura y devuelve un router de express para manejar rutas relacionadas con ¿¿??.
  * Configures and returns an Express Router for the food-related API endpoints.
  * @param {Object} params - Parametros para la configuracion del router. The parameters for configuring the router.

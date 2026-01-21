@@ -9,7 +9,7 @@ import { AdminController } from '../../controllers/admin/adminController.mjs';
 // Importamos los valores de las rutas/endpoints necesarios para este router.
 import { ADMIN_AUTH_ROUTE_PATH, ADMIN_DOCUMENTATION_ROUTE_PATH, AUTH_SIGNIN_ROUTE_PATH, AUTH_SIGNOUT_ROUTE_PATH,
     ADMIN_WEB_ROUTE_PATH, WEB_SCRAPING_ROUTE_PATH
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 /** adminRouter.
  * Esta funcion devuelve un router de express que tiene las siguiente rutas:
  * - POST /signin: Inicia la sesion de un usuario y devuelve un token.

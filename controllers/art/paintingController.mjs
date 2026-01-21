@@ -3,7 +3,7 @@ import {
     OKEY_200_MESSAGE, CREATED_201_MESSAGE,
     NOT_FOUND_404_MESSAGE, NOT_FOUND_404_QUERY_MESSAGE,
     INTERNAL_SERVER_ERROR_500_MESSAGE
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 export class PaintingController {
     constructor({ model }) {
         this.model = model;

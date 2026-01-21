@@ -3,7 +3,7 @@ import {
     OKEY_200_MESSAGE, CREATED_201_MESSAGE,
     FORBIDDEN_403_MESSAGE, CONFLICT_409_MESSAGE,
     INTERNAL_SERVER_ERROR_500_MESSAGE
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 //// Exportamos la clase UserController
 export class UserController { // HAY QUE REVISAR TODOS LOS ERRORES QUE SE DEVUELVEN AQUI. SEE: MODELO. REALIZAR ANTES DE NADA EL JSDoc de un modelo ya valido al 100%.
     constructor({ model }) {

@@ -3,7 +3,7 @@ import { expressRouterGenerator } from '../../utils/functions/expressRouterGener
 // Importamos los controladores necesarios para este router.
 import { TravelController } from '../../controllers/travel/travelController.mjs';
 // Importamos los valores de las rutas/endpoints necesarios para este router.
-import { TRAVEL_TRIP_ROUTE_PATH, UNAVAILABLE_DATES_ROUTE_PATH, IDENTIFIER_ROUTE_PATH } from '../../config/GenericEnvConfig.mjs';
+import { TRAVEL_TRIP_ROUTE_PATH, UNAVAILABLE_DATES_ROUTE_PATH, IDENTIFIER_ROUTE_PATH } from '../../config/EnvConfig.mjs';
 ////
 export const travelRouter = ({ TravelModel }) => {
     const travelRouter = expressRouterGenerator();

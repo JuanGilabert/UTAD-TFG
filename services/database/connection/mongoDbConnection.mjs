@@ -1,7 +1,7 @@
 // Modulos
 import { MongoClient, ServerApiVersion } from 'mongodb';
 // Modulos locales
-import { MONGODB_URI, DB_NAME } from '../../../config/GenericEnvConfig.mjs';
+import { MONGODB_URI, DB_NAME } from '../../../config/EnvConfig.mjs';
 // MongoDB Atlas URI
 const client = new MongoClient(MONGODB_URI, {
     serverApi: ServerApiVersion.v1,

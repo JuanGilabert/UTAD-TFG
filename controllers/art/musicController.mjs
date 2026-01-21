@@ -4,7 +4,7 @@ import {
     OKEY_200_MESSAGE, CREATED_201_MESSAGE,
     BAD_REQUEST_400_MESSAGE, NOT_FOUND_404_MESSAGE,
     INTERNAL_SERVER_ERROR_500_MESSAGE
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 export class MusicController {
     constructor({ model }) {
         this.model = model;

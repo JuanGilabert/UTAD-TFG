@@ -9,6 +9,7 @@ export class AdminController {
         this.model = model;
         this.postSignInUser = this.postSignInUser.bind(this);
         this.postSignOutUser = this.postSignOutUser.bind(this);
+        this.getScrapedDataByUrl = this.getScrapedDataByUrl.bind(this);
     }
     // Funcion para loguear un usuario.
     postSignInUser = async (req, res) => {

@@ -6,7 +6,7 @@ import { SportController } from '../../controllers/sport/sportController.mjs';
 import {
     SPORT_ACTIVITY_ROUTE_PATH, SPORT_ROUTINE_ROUTE_PATH,
     IDENTIFIER_ROUTE_PATH, UNAVAILABLE_DATES_ROUTE_PATH
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 /**
  * Creates and returns an Express router for handling sport-related API endpoints.
  * 

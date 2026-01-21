@@ -2,7 +2,7 @@
 import pkg from 'jsonwebtoken';
 const { sign } = pkg;
 // Modulos locales
-import { JWT_SECRET_KEY } from '../../../config/EnvConfig.mjs';
+import { JWT_SECRET_KEY } from '../../config/EnvConfig.mjs';
 /**
  * Generates a JSON Web Token (JWT) for a given user email.
  * @param {Object} param - An object containing user information.

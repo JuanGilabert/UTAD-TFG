@@ -9,7 +9,7 @@ import { ART_CINEMA_ROUTE_PATH, ART_MUSIC_ROUTE_PATH, ART_PAINTING_ROUTE_PATH,
     EVENT_ROUTE_PATH, ART_PAINTING_EXPOSURE_ROUTE_PATH, IDENTIFIER_ROUTE_PATH,
     UNAVAILABLE_DATES_ROUTE_PATH, CINEMA_MOVIE_DOWNLOADER_ROUTE_PATH,
     MUSIC_VIDEO_DOWNLOADER_ROUTE_PATH
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 /** Configura y devuelve un router de Express para manejar rutas relacionadas con el arte.
  * Configures and returns an Express router for handling art-related routes.
  * @param {Object} params - Parametros para la configuracion del router. The parameters for configuring the router.

@@ -1,6 +1,6 @@
 // Modulos locales
 import { connectDB } from '../connection/mongoDbConnection.mjs';
-import { USER_COLLECTION_NAME } from '../../../config/GenericEnvConfig.mjs';
+import { USER_COLLECTION_NAME } from '../../../config/EnvConfig.mjs';
 /* Funcion asincrona para comprobar si un email ya existe o no en la base de datos.
 En funcion del metodo que llame a esta funcion devolvera un valor u otro. En el metodo postNewUser devolvera true o false.
 En el metodo postLoginUser devolvera el usuario encontrado en base al email o false(deberia ser null como indica en el metodo. Rivsar esto.)

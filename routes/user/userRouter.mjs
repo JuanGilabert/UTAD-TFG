@@ -5,7 +5,7 @@ import { UserController } from '../../controllers/user/userController.mjs';
 // Importamos los middlewares necesarios.
 import { authMiddleware } from '../../middlewares/headerAuthMiddleware.mjs';
 // Importamos los valores de las rutas/endpoints
-import { IDENTIFIER_ROUTE_PATH } from '../../config/GenericEnvConfig.mjs';
+import { IDENTIFIER_ROUTE_PATH } from '../../config/EnvConfig.mjs';
 //// Exportamos el router.
 export const userRouter = ({ UserModel }) => {
     const userRouter = expressRouterGenerator();

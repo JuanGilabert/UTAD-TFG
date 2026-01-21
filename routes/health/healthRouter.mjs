@@ -7,7 +7,7 @@ import { HealthMedicalAppointmentController } from '../../controllers/health/med
 import {
     HEALTH_MEDICAL_APPOINTMENT_ROUTE_PATH, HEALTH_MEDICAMENT_ROUTE_PATH,
     MEDICAMENT_EXPIRATION_DATE_ROUTE_PATH, IDENTIFIER_ROUTE_PATH, ITEM_ROUTE_PATH, APPOINTMENT_ROUTE_PATH
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 /**
  * Configures the health-related routes for the application.
  * 

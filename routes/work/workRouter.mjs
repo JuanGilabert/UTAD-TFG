@@ -6,7 +6,7 @@ import { WorkController } from '../../controllers/work/workController.mjs';
 import {
     TASK_ROUTE_PATH,
     IDENTIFIER_ROUTE_PATH, UNAVAILABLE_DATES_ROUTE_PATH
-} from '../../config/GenericEnvConfig.mjs';
+} from '../../config/EnvConfig.mjs';
 //// Exportamos el router.
 export const workRouter = ({ WorkModel }) => {
     const workRouter = expressRouterGenerator();
