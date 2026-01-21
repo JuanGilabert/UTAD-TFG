@@ -37,13 +37,13 @@ pipeline {
                 script {
                     def scopes = params.TestScope?.split(',') ?: []
                     if (scopes.contains('unit')) {
-                        sh 'npm test -- --testPathPattern=unit'
+                        sh 'npm test -- --testPathPatterns=unit'
                     }
                     if (scopes.contains('integration')) {
-                        sh 'npm test -- --testPathPattern=integration'
+                        sh 'npm test -- --testPathPatterns=integration'
                     }
                     if (scopes.contains('e2e')) {
-                        sh 'npm test -- --testPathPattern=e2e'
+                        sh 'npm test -- --testPathPatterns=e2e'
                     }
                     if (scopes.contains('all') || scopes.isEmpty()) {
                         sh 'npm test'
