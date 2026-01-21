@@ -2,9 +2,8 @@ properties([
     parameters([
         [$class: 'ChoiceParameter',
             choiceType: 'PT_CHECKBOX', description: 'Seleccion Test List',
-            filterLength: 1, name: 'TestScope', randomName: 'choice-parameter-test',
-            script: [$class: 'GroovyScript',
-                fallbackScript: [classpath: [], sandbox: false, script: 'return[\'Could not get Test List\']' ],
+            name: 'TestScope', script: [$class: 'GroovyScript',
+                fallbackScript: [classpath: [], sandbox: false, script: 'return ["all"]' ],
                 script: [classpath: [], sandbox: false,
                     script: '''
                         return [
@@ -14,8 +13,6 @@ properties([
                 ]
             ]
         ],
-        // String para elegir el numero de repeticiones.
-        string(name: 'Rep0', defaultValue: '1', description: 'Introduce el numero de repeticiones del test'),
         // Boleano para elegir si se quiere subir a Kibana.
         booleanParam(name: 'Kibana', defaultValue: false, description: '¿Quieres subir los resultados a Kibana?'),
     ])
@@ -38,14 +35,18 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    if (params.TestScope == 'unit') {
+                    def scopes = params.TestScope?.split(',') ?: []
+                    if (scopes.contains('unit')) {
                         sh 'npm test -- --testPathPattern=unit'
-                    } else if (params.TestScope == 'integration') {
+                    }
+                    if (scopes.contains('integration')) {
                         sh 'npm test -- --testPathPattern=integration'
-                    } else if (params.TestScope == 'e2e') {
+                    }
+                    if (scopes.contains('e2e')) {
                         sh 'npm test -- --testPathPattern=e2e'
-                    } else {
-                        sh 'npm test --'
+                    }
+                    if (scopes.contains('all') || scopes.isEmpty()) {
+                        sh 'npm test'
                     }
                 }
             }
