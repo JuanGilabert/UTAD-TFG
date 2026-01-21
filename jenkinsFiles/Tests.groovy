@@ -18,6 +18,14 @@ pipeline {
         SONAR_TOKEN = credentials('SonarQubeAccessToken')
     }
     stages {
+        stage('Setup Env') {
+            steps {
+                // Copiamos el .env secreto al workspace
+                withCredentials([file(credentialsId: 'TaskManagerEnviromentCredentials', variable: 'DOTENV')]) {
+                    sh 'cp $DOTENV .env'
+                }
+            }
+        }
         stage('Install dependencies') {
             steps {
                 /* Aceleramos los builds utilizando cache al tener package-lock.json */
